@@ -17,8 +17,12 @@ class LoginForm extends View
     <body>
         <div align="center">
             <form method="POST" action="/auth">
-                Username: <input type="text" name="username" size="15" /><br />
-                Password: <input type="password" name="password" size="15" /><br />
+                <p>Username: <input type="text" name="username" size="15" /><br />
+                <p>Password: <input type="password" name="password" size="15" /><br />
+                <p>Authentication Method: <select name="ValidationOption">
+                <option value="InMemoryAuth">From Memory</option>
+                <option value="FileBasedAuth">From File</option></select><br />
+                <p>Hint:Chuck is valid user. Norris is valid pw.<br />
                 <p><input type="submit" value="Login" /></p>
             </form>
         </div>

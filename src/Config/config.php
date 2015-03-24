@@ -15,6 +15,7 @@ $config = [
         'classes'      => [
             'Common\\Authentication\\FileBased' => $authDir . '/FileBased.php',
             'Common\\Authentication\\InMemory'  => $authDir . '/InMemory.php',
+            'Common\\Authentication\\CommonAuth'  => $authDir . '/CommonAuth.php',
             'Common\\Http\\IRequest'            => $httpDir . '/IRequest.php',
             'Common\\Http\\SimpleRequest'       => $httpDir . '/SimpleRequest.php',
             'Common\\Routers\\IRouter'          => $routerDir . '/IRouter.php',
@@ -36,7 +37,7 @@ $config = [
             'views'          => $viewsDir
         ],
         'uri-mappings' => [
-            '/auth' => 'Controllers\\AuthController',
+            '/auth' => 'Controllers\\AuthController', //Can change so it only handles POST requests  'POST,/auth' => 'Controllers\\AuthController'
             '/'     => 'Controllers\\MainController'
         ]
     ]
